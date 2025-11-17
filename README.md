@@ -34,6 +34,9 @@ $ npm run dev
 Сделать commit, запустить Husky, ESLint, Prettier, lint-staged, Stylelint, Commitizen:
 $ npm run commit
 
+Залить изменения на GitHub (выполняем из корневой директории проекта tir-frontend):
+$ git push
+
 
 ### Бэкенд
 Перейдите в папку с исходным кодом бэкенда
