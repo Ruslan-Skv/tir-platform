@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run build:client && npm run build:sitemap",
+    "build:client": "vite build",
+    "build:sitemap": "node scripts/generate-sitemap.js",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "lint:check": "eslint .",
@@ -24,9 +26,10 @@
     "@reduxjs/toolkit": "^2.10.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-helmet-async": "^2.0.5",
+    "react-helmet-async": "^2.0.4",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.9.5"
+    "react-router-dom": "^7.9.5",
+    "vite-plugin-ssr": "^0.4.142"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^20.0.0",
@@ -34,6 +37,7 @@
     "@types/node": "^24.10.0",
     "@types/react": "^19.2.4",
     "@types/react-dom": "^19.2.3",
+    "@types/react-helmet": "^6.1.11",
     "@typescript-eslint/eslint-plugin": "^8.46.4",
     "@typescript-eslint/parser": "^8.46.4",
     "@vitejs/plugin-react": "^5.1.0",
