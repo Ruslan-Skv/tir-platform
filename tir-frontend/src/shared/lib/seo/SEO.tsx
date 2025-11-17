@@ -1,14 +1,19 @@
+//Это кастомный SEO компонент, который управляет мета-тегами страницы.
+//Это централизованная SEO-система вашего приложения, которая гарантирует что каждая страница имеет правильные мета-теги для поисковиков и соцсетей!
+//Главная особенность - компонент НЕ рендерит DOM
 import { useEffect } from 'react';
 
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
+  title?: string; // Заголовок страницы (<title>)
+  description?: string; // Описание (meta description)
+  keywords?: string; // Ключевые слова
+  image?: string; // Изображение для соцсетей (Open Graph)
+  url?: string; // Канонический URL
+  type?: 'website' | 'article' | 'product'; // Тип контента
 }
 
+//Работает через side effects (useEffect)
+//Не создает лишних DOM элементов
 export const SEO: React.FC<SEOProps> = props => {
   const {
     title = 'Территория интерьерных решений',
@@ -22,8 +27,9 @@ export const SEO: React.FC<SEOProps> = props => {
   const fullUrl = `https://psk-pobeda.ru${url}`;
 
   useEffect(() => {
+    // Этот код выполняется после рендера компонента
     // Обновляем title
-    document.title = title;
+    document.title = title; // Меняет заголовок вкладки
 
     // Обновляем или создаем meta-теги
     updateMetaTag('description', description);
@@ -43,13 +49,13 @@ export const SEO: React.FC<SEOProps> = props => {
       document.head.appendChild(canonical);
     }
     canonical.href = fullUrl;
-  }, [title, description, keywords, image, url, type, fullUrl]);
+  }, [title, description, keywords, image, url, type, fullUrl]); // Зависимости - при изменении любого из этих props эффект перезапускается
 
   // Этот компонент ничего не рендерит в DOM
   return null;
 };
 
-// Вспомогательная функция для обновления meta-тегов
+// Вспомогательная функция для обновления meta-тегов (Функция updateMetaTag - умное обновление тегов)
 function updateMetaTag(name: string, content: string, attr: string = 'name') {
   let meta = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement;
   if (!meta) {
@@ -59,45 +65,3 @@ function updateMetaTag(name: string, content: string, attr: string = 'name') {
   }
   meta.content = content;
 }
-
-// import pkg from 'react-helmet-async'
-// const { Helmet } = pkg
-
-// interface SEOProps {
-//   title?: string
-//   description?: string
-//   keywords?: string
-//   image?: string
-//   url?: string
-//   type?: 'website' | 'article' | 'product'
-// }
-
-// export const SEO: React.FC<SEOProps> = (props) => {
-//   const {
-//     title = 'Территория интерьерных решений',
-//     description = 'Современные решения для вашего интерьера. Мебель, ремонт, потолки, окна и жалюзи.',
-//     keywords = 'интерьер, мебель, ремонт, потолки, окна, жалюзи, дизайн',
-//     image = '/og-image.jpg',
-//     url = '',
-//     type = 'website'
-//   } = props
-
-//   const fullUrl = `https://psk-pobeda.ru${url}`
-
-//   return (
-//     <Helmet>
-//       <title>{title}</title>
-//       <meta name="description" content={description} />
-//       <meta name="keywords" content={keywords} />
-
-//       <meta property="og:title" content={title} />
-//       <meta property="og:description" content={description} />
-//       <meta property="og:image" content={image} />
-//       <meta property="og:url" content={fullUrl} />
-//       <meta property="og:type" content={type} />
-//       <meta property="og:site_name" content="Территория интерьерных решений" />
-
-//       <link rel="canonical" href={fullUrl} />
-//     </Helmet>
-//   )
-// }
