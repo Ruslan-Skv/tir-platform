@@ -39,7 +39,7 @@ export function render(pageContext: { urlParsed: { pathname: string } }) {
         ${dangerouslySkipEscape(helmet?.link?.toString() || '')}
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/react.svg" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body ${dangerouslySkipEscape(helmet?.bodyAttributes?.toString() || '')}>
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
