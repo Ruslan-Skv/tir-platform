@@ -1,0 +1,114 @@
+.contact {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.contactMobile {
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: 500;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.topBar {
+  background: transparent;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 2.5rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.desktopContact {
+  display: none;
+}
+
+.utilities {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.utilityButton {
+  align-items: center;
+  color: #374151;
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.utilityButton:hover {
+  color: #d90652;
+}
+
+.icon {
+  height: 1rem;
+  margin-right: 0.25rem;
+  width: 1rem;
+}
+
+.mobileUtilityButton {
+  align-items: center;
+  color: #374151;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.mobileUtilityButton:hover {
+  color: #d90652;
+}
+
+.mobileIcon {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+@media (width >= 640px) {
+  .utilities {
+    gap: 1rem;
+  }
+
+  .utilityButton {
+    font-size: 1rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .contactMobile {
+    display: none;
+  }
+
+  .desktopContact {
+    display: flex;
+  }
+
+  .mobileUtilityButton {
+    display: none;
+  }
+}
+
+@media (width >= 768px) {
+  .utilityText {
+    display: inline;
+  }
+}
+
+.utilityTextMobile {
+  display: none;
+}
+
+@media (width >= 768px) {
+  .utilityTextMobile {
+    display: inline;
+  }
+}

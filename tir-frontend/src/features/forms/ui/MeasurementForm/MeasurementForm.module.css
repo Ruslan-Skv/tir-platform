@@ -1,0 +1,143 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.label {
+  color: #374151;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.input {
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  color: #111827;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+}
+
+.input:focus {
+  border-color: #d90652;
+  box-shadow: 0 0 0 3px rgb(217 6 82 / 10%);
+  outline: none;
+}
+
+.select {
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  color: #111827;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+}
+
+.select:focus {
+  border-color: #d90652;
+  box-shadow: 0 0 0 3px rgb(217 6 82 / 10%);
+  outline: none;
+}
+
+.textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  color: #111827;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+}
+
+.textarea:focus {
+  border-color: #d90652;
+  box-shadow: 0 0 0 3px rgb(217 6 82 / 10%);
+  outline: none;
+}
+
+.info {
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.infoContent {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.infoIcon {
+  flex-shrink: 0;
+}
+
+.infoSvg {
+  color: #2563eb;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.infoText {
+  color: #1e40af;
+  font-size: 0.875rem;
+}
+
+.infoList {
+  list-style: disc;
+  margin-top: 0.25rem;
+  padding-left: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+}
+
+.dark .label {
+  color: #d1d5db;
+}
+
+.dark .input {
+  background: #374151;
+  border-color: #4b5563;
+  color: #fff;
+}
+
+.dark .select {
+  background: #374151;
+  border-color: #4b5563;
+  color: #fff;
+}
+
+.dark .textarea {
+  background: #374151;
+  border-color: #4b5563;
+  color: #fff;
+}
+
+.dark .info {
+  background: rgb(30 58 138 / 20%);
+  border-color: #1e40af;
+}
+
+.dark .infoText {
+  color: #93c5fd;
+}
+
+.dark .infoSvg {
+  color: #60a5fa;
+}
+
+@media (width >= 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

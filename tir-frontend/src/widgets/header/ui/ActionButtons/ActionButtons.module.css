@@ -1,0 +1,57 @@
+.button {
+  white-space: nowrap;
+}
+
+.desktopButtons {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.375rem;
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.menuButton {
+  border-radius: 0.375rem;
+  color: #374151;
+  padding: 0.5rem;
+  transition: color 0.2s;
+}
+
+.menuButton:hover {
+  color: #111827;
+}
+
+.menuIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.mobileMenuButton {
+  display: flex;
+}
+
+@media (width >= 1024px) {
+  .desktopButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .mobileMenuButton {
+    display: none;
+  }
+}
+
+.dark .error {
+  background-color: #450a0a;
+  border-color: #7f1d1d;
+  color: #fca5a5;
+}

@@ -1,0 +1,31 @@
+.container {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.icon {
+  color: #10b981;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  width: 4rem;
+}
+
+.title {
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.message {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.dark .title {
+  color: #fff;
+}
+
+.dark .message {
+  color: #9ca3af;
+}

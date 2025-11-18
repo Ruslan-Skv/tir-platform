@@ -1,0 +1,31 @@
+.header {
+  background: transparent;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 50;
+}
+
+.mainHeader {
+  background: transparent;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.logoSection {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.logo {
+  color: #d90652;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
