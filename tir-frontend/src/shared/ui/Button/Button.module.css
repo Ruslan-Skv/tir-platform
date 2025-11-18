@@ -1,29 +1,69 @@
-.button {
+.base {
+  align-items: center;
+  background-color: transparent;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-family: inherit;
-  transition: all 0.2s ease;
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
+.base:focus {
+  outline: none;
+}
+
+/* Variants */
 .primary {
-  background: #007bff;
+  background-color: #d90652;
   color: white;
 }
 
-.primary:hover {
-  background: #0056b3;
+.primary:focus {
+  background-color: #d90652;
+  box-shadow: 0 0 0 4px rgb(217 6 82 / 25%);
+}
+
+.primary:hover:not(.disabled) {
+  background-color: #b80545;
+  box-shadow: 0 0 20px 8px rgb(217 6 82 / 30%);
 }
 
 .secondary {
-  background: #6c757d;
+  background-color: #6b7280;
   color: white;
 }
 
-.secondary:hover {
-  background: #545b62;
+.secondary:focus {
+  background-color: #6b7280;
+  box-shadow: 0 0 0 4px rgb(107 114 128 / 25%);
 }
 
+.secondary:hover:not(.disabled) {
+  background-color: #374151;
+  box-shadow: 0 0 20px 8px rgb(107 114 128 / 30%);
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid #d90652;
+  color: #000;
+}
+
+.outline:focus {
+  background-color: #d90652;
+  box-shadow: 0 0 0 4px rgb(217 6 82 / 25%);
+  color: white;
+}
+
+.outline:hover:not(.disabled) {
+  box-shadow: 0 0 20px 8px rgb(217 6 82 / 30%);
+}
+
+/* Sizes */
 .sm {
   font-size: 14px;
   padding: 6px 12px;
@@ -31,10 +71,42 @@
 
 .md {
   font-size: 16px;
-  padding: 8px 16px;
+  padding: 8px 24px;
 }
 
 .lg {
   font-size: 18px;
-  padding: 12px 24px;
+  padding: 12px 32px;
+}
+
+/* States */
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.disabled:hover {
+  box-shadow: none;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Glow effect */
+.glow {
+  background-color: rgb(217 6 82 / 0%);
+  border-radius: 6px;
+  filter: blur(12px);
+  inset: 0;
+  position: absolute;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.base:not(.disabled):hover .glow {
+  background-color: rgb(217 6 82 / 20%);
+  transform: scale(1.1);
 }
