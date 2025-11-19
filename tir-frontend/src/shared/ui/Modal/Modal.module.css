@@ -10,7 +10,7 @@
   transition: opacity 0.3s;
 }
 
-.dark .backdrop {
+html[data-theme='dark'] .backdrop {
   background: rgb(0 0 0 / 70%);
 }
 
@@ -98,20 +98,20 @@
 }
 
 /* Темная тема для Modal */
-.dark .panel {
+html[data-theme='dark'] .panel {
   background: #1f2937;
   border: 1px solid #374151;
 }
 
-.dark .title {
+html[data-theme='dark'] .title {
   color: #fff;
 }
 
-.dark .closeButton {
+html[data-theme='dark'] .closeButton {
   color: #9ca3af;
 }
 
-.dark .closeButton:hover {
+html[data-theme='dark'] .closeButton:hover {
   background: #374151;
   color: #d1d5db;
 }
