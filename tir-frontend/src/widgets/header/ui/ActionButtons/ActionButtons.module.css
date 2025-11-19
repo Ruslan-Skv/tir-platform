@@ -38,6 +38,21 @@
   display: flex;
 }
 
+/* Темная тема */
+.dark .menuButton {
+  color: #d1d5db;
+}
+
+.dark .menuButton:hover {
+  color: #f9fafb;
+}
+
+.dark .error {
+  background-color: #450a0a;
+  border-color: #7f1d1d;
+  color: #fca5a5;
+}
+
 @media (width >= 1024px) {
   .desktopButtons {
     display: flex;
@@ -48,10 +63,4 @@
   .mobileMenuButton {
     display: none;
   }
-}
-
-.dark .error {
-  background-color: #450a0a;
-  border-color: #7f1d1d;
-  color: #fca5a5;
 }

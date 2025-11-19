@@ -10,6 +10,10 @@
   transition: opacity 0.3s;
 }
 
+.dark .backdrop {
+  background: rgb(0 0 0 / 70%);
+}
+
 .container {
   inset: 0;
   overflow-y: auto;
@@ -93,12 +97,18 @@
   position: relative;
 }
 
+/* Темная тема для Modal */
 .dark .panel {
   background: #1f2937;
+  border: 1px solid #374151;
 }
 
 .dark .title {
   color: #fff;
+}
+
+.dark .closeButton {
+  color: #9ca3af;
 }
 
 .dark .closeButton:hover {

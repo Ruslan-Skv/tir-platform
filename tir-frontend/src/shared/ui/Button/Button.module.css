@@ -59,8 +59,18 @@
   color: white;
 }
 
+/* Темная тема для Button - ДО hover состояний */
+.dark .outline {
+  border-color: #ec4899;
+  color: #fff;
+}
+
 .outline:hover:not(.disabled) {
   box-shadow: 0 0 20px 8px rgb(217 6 82 / 30%);
+}
+
+.dark .outline:hover:not(.disabled) {
+  box-shadow: 0 0 20px 8px rgb(236 72 153 / 30%);
 }
 
 /* Sizes */
@@ -109,4 +119,8 @@
 .base:not(.disabled):hover .glow {
   background-color: rgb(217 6 82 / 20%);
   transform: scale(1.1);
+}
+
+.dark .base:not(.disabled):hover .glow {
+  background-color: rgb(236 72 153 / 20%);
 }

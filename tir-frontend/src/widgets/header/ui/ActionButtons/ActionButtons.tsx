@@ -5,6 +5,7 @@ import { Modal } from '@/shared/ui/Modal';
 import { useModal } from '@/shared/lib/hooks/useModal';
 import styles from './ActionButtons.module.css';
 import { CallbackForm, MeasurementForm, SuccessMessage, useFormSubmission } from '@/features/forms';
+import type { CallbackFormData, MeasurementFormData } from '@/features/forms/types/forms';
 
 export interface ActionButtonsProps {
   onMobileMenuOpen?: () => void;
@@ -15,7 +16,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ onMobileMenuOpen }
   const callbackModal = useModal();
   const formSubmission = useFormSubmission();
 
-  const handleMeasurementSubmit = async (data: any) => {
+  const handleMeasurementSubmit = async (data: MeasurementFormData) => {
     const success = await formSubmission.submitMeasurement(data);
     if (success) {
       setTimeout(() => {
@@ -25,7 +26,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ onMobileMenuOpen }
     }
   };
 
-  const handleCallbackSubmit = async (data: any) => {
+  const handleCallbackSubmit = async (data: CallbackFormData) => {
     const success = await formSubmission.submitCallback(data);
     if (success) {
       setTimeout(() => {

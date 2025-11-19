@@ -1,0 +1,13 @@
+.background {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: background-image 0.3s ease-in-out;
+  width: 100%;
+  z-index: 0;
+}

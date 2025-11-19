@@ -10,11 +10,13 @@ import { Page as ProfilePage } from '@/pages/profile/index.page';
 import { Page as AdminPage } from '@/pages/admin/index.page';
 import { Page as Constructor3D } from '@/features/constructor/index.page';
 import { NotFoundPage } from './shared/ui';
+import { Background } from './widgets/background';
 
 function App() {
   return (
     <div className="App">
       <SEO />
+      <Background />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
