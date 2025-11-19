@@ -49,10 +49,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ onMobileMenuOpen }
   return (
     <>
       <div className={styles.desktopButtons}>
-        <Button variant="primary" onClick={measurementModal.open} className={styles.button}>
+        <Button variant="outline" onClick={measurementModal.open} className={styles.button}>
           Записаться на замер
         </Button>
-        <Button variant="secondary" onClick={callbackModal.open} className={styles.button}>
+        <Button variant="outline" onClick={callbackModal.open} className={styles.button}>
           Заказать обратный звонок
         </Button>
       </div>

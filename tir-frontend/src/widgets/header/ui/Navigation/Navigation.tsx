@@ -1,6 +1,4 @@
 import React from 'react';
-// import { DesktopNavigation } from '../DesktopNavigation';
-// import { MobileNavigation } from '../MobileNavigation';
 import styles from './Navigation.module.css';
 import { DesktopNavigation } from '../DesktopNavigation/DesktopNavigation';
 import { MobileNavigation } from '../MobileNavigation';

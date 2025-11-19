@@ -33,7 +33,7 @@ export const TopBar: React.FC = () => {
           <button onClick={() => navigate('/profile')} className={styles.utilityButton}>
             <UserIcon className={styles.icon} />
             <span className={styles.utilityText}>Личный кабинет</span>
-            <span className={styles.utilityTextMobile}>Кабинет</span>
+            {/* <span className={styles.utilityTextMobile}>Кабинет</span> */}
           </button>
 
           {/* Избранное */}

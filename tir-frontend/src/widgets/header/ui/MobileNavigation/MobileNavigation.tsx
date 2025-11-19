@@ -44,8 +44,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
   const callbackModal = useModal();
   const formSubmission = useFormSubmission();
 
-  const handleNavClick = (itemName: string, event: React.MouseEvent) => {
-    event.preventDefault();
+  const handleNavClick = (itemName: string) => {
     if (onNavigationClick) {
       onNavigationClick(itemName);
     }
@@ -210,14 +209,14 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
                 return (
                   <div key={item.name}>
                     <div className={styles.navItem}>
-                      <button
-                        onClick={e => handleNavClick(item.name, e)}
-                        className={`${styles.navButton} ${
-                          hasDropdown ? styles.navButtonWithDropdown : ''
-                        }`}
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => handleNavClick(item.name)}
+                        className={styles.navButton}
                       >
                         {item.name}
-                      </button>
+                      </Button>
                       {hasDropdown && (
                         <button
                           onClick={e => toggleMobileDropdown(item.name, e)}

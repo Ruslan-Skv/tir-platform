@@ -38,16 +38,16 @@
   display: flex;
 }
 
-/* Темная тема */
-.dark .menuButton {
+/* Темная тема для кнопки меню */
+html[data-theme='dark'] .menuButton {
   color: #d1d5db;
 }
 
-.dark .menuButton:hover {
+html[data-theme='dark'] .menuButton:hover {
   color: #f9fafb;
 }
 
-.dark .error {
+html[data-theme='dark'] .error {
   background-color: #450a0a;
   border-color: #7f1d1d;
   color: #fca5a5;

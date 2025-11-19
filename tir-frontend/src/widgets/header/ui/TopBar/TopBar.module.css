@@ -38,6 +38,8 @@
 
 .utilityButton {
   align-items: center;
+  background-color: transparent;
+  border: none;
   color: #374151;
   display: flex;
   font-size: 0.875rem;
@@ -71,6 +73,27 @@
 .mobileIcon {
   height: 1.25rem;
   width: 1.25rem;
+}
+
+/* Темная тема для TopBar */
+html[data-theme='dark'] .contact {
+  color: #d1d5db;
+}
+
+html[data-theme='dark'] .utilityButton {
+  color: #d1d5db;
+}
+
+html[data-theme='dark'] .utilityButton:hover {
+  color: #ec4899;
+}
+
+html[data-theme='dark'] .mobileUtilityButton {
+  color: #d1d5db;
+}
+
+html[data-theme='dark'] .mobileUtilityButton:hover {
+  color: #ec4899;
 }
 
 @media (width >= 640px) {
