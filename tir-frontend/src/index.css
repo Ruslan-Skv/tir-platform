@@ -1,31 +1,78 @@
-:root {
+/* stylelint-disable order/properties-alphabetical-order */
+
+/* ===== ПОДКЛЮЧЕНИЕ ШРИФТОВ ===== */
+@font-face {
+  font-display: swap;
+  font-family: play;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Play/Play-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: play;
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Play/Play-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: oswald;
+  font-style: normal;
+  font-weight: 200 700;
+  src: url('/fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'great vibes';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Great_Vibes/GreatVibes-Regular.ttf') format('truetype');
+}
+
+/* stylelint-enable order/properties-alphabetical-order */
+
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
+* {
+  box-sizing: border-box;
+  font-family: play, oswald, arial, system-ui, avenir, helvetica, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
   background-color: #242424;
   color: rgb(255 255 255 / 87%);
   color-scheme: light dark;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: play, oswald, arial, system-ui, avenir, helvetica, sans-serif;
+  font-size: 1rem;
   font-synthesis: none;
   font-weight: 400;
   line-height: 1.5;
-  text-rendering: optimizelegibility;
-}
-
-a {
-  color: #646cff;
-  font-weight: 500;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
-/* ИСПРАВЛЕНИЕ: Убираем центрирование body */
-body {
   margin: 0;
   min-height: 100vh;
   min-width: 320px;
+  -moz-osx-font-smoothing: grayscale; /* stylelint-disable-line order/properties-alphabetical-order */
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased; /* stylelint-disable-line order/properties-alphabetical-order */
+}
+
+/* ===== ТИПОГРАФИКА ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: oswald, play, arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 0.5em;
 }
 
 h1 {
@@ -33,27 +80,85 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  background-color: #1a1a1a;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 1em;
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.875rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1.125rem;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+/* ===== ССЫЛКИ ===== */
+a {
+  color: #646cff;
   font-weight: 500;
-  padding: 0.6em 1.2em;
-  transition: border-color 0.25s;
+  text-decoration: inherit;
+  transition: color 0.25s;
 }
 
-button:hover {
-  border-color: #646cff;
+a:hover {
+  color: #535bf2;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* ===== ФОРМЫ ===== */
+button,
+input,
+textarea,
+select {
+  font-family: play, oswald, arial, system-ui, avenir, helvetica, sans-serif;
+  font-size: inherit;
+  line-height: inherit;
 }
 
+button {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ===== УТИЛИТНЫЕ КЛАССЫ ===== */
+.text-heading {
+  font-family: oswald, play, arial, sans-serif;
+  font-weight: 600;
+}
+
+.text-decorative {
+  font-family: 'great vibes', cursive;
+  font-weight: 400;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+/* ===== СВЕТЛАЯ ТЕМА ===== */
 @media (prefers-color-scheme: light) {
   :root {
     background-color: #fff;
@@ -63,8 +168,23 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
+}
 
-  button {
-    background-color: #f9f9f9;
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (width <= 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.625rem;
+  }
+
+  h4 {
+    font-size: 1.375rem;
   }
 }

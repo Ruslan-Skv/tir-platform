@@ -26,7 +26,7 @@ export const navigation: NavigationItem[] = [
     category: 'windows',
   },
   {
-    name: 'Натяжные потолки',
+    name: 'Потолки',
     href: '/ceilings',
     hasDropdown: true,
     category: 'ceilings',

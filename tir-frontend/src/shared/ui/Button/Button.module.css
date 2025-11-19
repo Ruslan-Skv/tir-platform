@@ -5,10 +5,12 @@
   border-radius: 6px;
   cursor: pointer;
   display: flex;
+  font-family: play, oswald, arial, 'great vibes', Georgia, 'Times New Roman', Times, serif;
   font-weight: 500;
   justify-content: center;
   overflow: hidden;
   position: relative;
+  text-transform: uppercase;
   transition: all 0.3s ease;
 }
 
