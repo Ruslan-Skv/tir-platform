@@ -25,7 +25,7 @@
 }
 
 .dropdown {
-  background: #fff;
+  background: rgb(211 211 211);
   border: 1px solid #d90652;
   border-radius: 0.375rem;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%);
