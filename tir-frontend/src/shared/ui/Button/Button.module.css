@@ -62,7 +62,7 @@
 /* Темная тема для Button с data-attributes - ДО hover состояний */
 html[data-theme='dark'] .outline {
   border-color: #ec4899;
-  color: #fff;
+  color: #d1d5db;
 }
 
 .outline:hover:not(.disabled) {

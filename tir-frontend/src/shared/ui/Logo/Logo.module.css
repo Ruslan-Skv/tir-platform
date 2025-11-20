@@ -23,6 +23,15 @@
   fill: #d90652;
 }
 
+/* Темная тема для текста логотипа */
+html[data-theme='dark'] .color4 {
+  fill: #ec4899;
+}
+
+html[data-theme='dark'] .color5 {
+  fill: #ec4899;
+}
+
 @media (width <= 1023px) {
   .logo {
     transform: scale(0.67);
