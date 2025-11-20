@@ -8,7 +8,7 @@ export const navigation: NavigationItem[] = [
     category: 'furniture',
   },
   {
-    name: 'Ремонт квартир',
+    name: 'Ремонт',
     href: '/repair',
     hasDropdown: true,
     category: 'repair',
@@ -191,7 +191,7 @@ export const dropdownMenus: DropdownMenus = {
       },
     ],
   },
-  'Ремонт квартир': {
+  Ремонт: {
     category: 'repair',
     image: '../images/remont-kvartir.jpg',
     items: [
@@ -304,7 +304,7 @@ export const dropdownMenus: DropdownMenus = {
         hasSubmenu: true,
         submenu: [
           {
-            name: 'Натяжные потолки',
+            name: 'Потолки',
             href: '/repair/ceilings/stretch',
             productType: 'stretch_ceilings',
           },
@@ -523,7 +523,7 @@ export const dropdownMenus: DropdownMenus = {
       },
     ],
   },
-  'Натяжные потолки': {
+  Потолки: {
     category: 'ceilings',
     image: '../images/potolki.jpg',
     items: [
