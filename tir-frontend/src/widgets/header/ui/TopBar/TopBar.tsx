@@ -32,7 +32,7 @@ export const TopBar: React.FC = () => {
           {/* Личный кабинет */}
           <button onClick={() => navigate('/profile')} className={styles.utilityButton}>
             <UserIcon className={styles.icon} />
-            <span className={styles.utilityText}>Личный кабинет</span>
+            <span className={styles.utilityText}>Кабинет</span>
             {/* <span className={styles.utilityTextMobile}>Кабинет</span> */}
           </button>
 
@@ -58,9 +58,9 @@ export const TopBar: React.FC = () => {
           </button>
 
           {/* Мобильная кнопка пользователя */}
-          <button onClick={() => navigate('/profile')} className={styles.mobileUtilityButton}>
+          {/* <button onClick={() => navigate('/profile')} className={styles.mobileUtilityButton}>
             <UserIcon className={styles.mobileIcon} />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

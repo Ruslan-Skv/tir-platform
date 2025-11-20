@@ -14,7 +14,7 @@ import { navigation, dropdownMenus } from '@/shared/constants/navigation';
 import { Button } from '@/shared/ui/Button';
 import { useTheme } from '@/features/theme';
 import styles from './MobileNavigation.module.css';
-import { Modal } from '@/shared/ui';
+import { Logo, Modal } from '@/shared/ui';
 import { useModal } from '@/shared/lib';
 import {
   CallbackForm,
@@ -160,7 +160,9 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
         <Dialog.Panel className={styles.panel}>
           {/* Заголовок меню */}
           <div className={styles.header}>
-            <div className={styles.logo}>ТИР</div>
+            <div className={styles.logo}>
+              <Logo />
+            </div>
             <button type="button" className={styles.closeButton} onClick={handleCloseMenu}>
               <XMarkIcon className={styles.closeIcon} />
             </button>
