@@ -50,15 +50,13 @@
 }
 
 .outline {
-  background-color: transparent;
+  background-color: rgb(217 6 82 / 5%);
   border: 1px solid #d90652;
   color: #000;
 }
 
 .outline:focus {
-  background-color: #d90652;
   box-shadow: 0 0 0 4px rgb(217 6 82 / 25%);
-  color: white;
 }
 
 /* Темная тема для Button с data-attributes - ДО hover состояний */

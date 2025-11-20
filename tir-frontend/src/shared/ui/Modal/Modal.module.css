@@ -29,7 +29,7 @@ html[data-theme='dark'] .backdrop {
 }
 
 .panel {
-  background: #fff;
+  background: rgb(211 211 211);
   border-radius: 1rem;
   overflow: hidden;
   padding: 1.5rem;
