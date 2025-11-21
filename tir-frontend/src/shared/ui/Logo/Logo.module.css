@@ -34,7 +34,6 @@ html[data-theme='dark'] .color5 {
 
 @media (width <= 1023px) {
   .logo {
-    transform: scale(0.67);
-    transform-origin: left center;
+    height: 3rem;
   }
 }

@@ -4,12 +4,13 @@
   font-weight: 500;
 }
 
-.contactMobile {
+.contactMobile .contact {
+  color: #374151;
   display: flex;
-  font-size: 1.25rem;
+  font-size: 0.95rem;
   font-weight: 500;
   justify-content: center;
-  padding: 0.5rem 0;
+  padding: 0 15px 0 0;
 }
 
 .topBar {
@@ -99,7 +100,7 @@ html[data-theme='dark'] .mobileUtilityButton:hover {
 }
 
 /* Мобильная адаптация для текста кнопок */
-@media (width < 768px) {
+@media (width < 949px) {
   .utilityText {
     display: none;
   }
@@ -119,7 +120,7 @@ html[data-theme='dark'] .mobileUtilityButton:hover {
   }
 }
 
-@media (width >= 1024px) {
+@media (width >= 950px) {
   .contactMobile {
     display: none;
   }
@@ -133,7 +134,7 @@ html[data-theme='dark'] .mobileUtilityButton:hover {
   }
 }
 
-@media (width >= 768px) {
+@media (width >= 950px) {
   .utilityText {
     display: inline;
   }
@@ -146,5 +147,12 @@ html[data-theme='dark'] .mobileUtilityButton:hover {
 @media (width >= 768px) {
   .utilityTextMobile {
     display: inline;
+  }
+}
+
+@media (width <= 766px) {
+  .container {
+    height: 2rem;
+    padding: 0;
   }
 }

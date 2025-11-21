@@ -27,6 +27,10 @@
   transition: color 0.2s;
 }
 
+.contactMobile {
+  display: block;
+}
+
 .menuButton:hover {
   color: #111827;
 }
@@ -64,6 +68,10 @@ html[data-theme='dark'] .error {
   }
 
   .mobileMenuButton {
+    display: none;
+  }
+
+  .contactMobile {
     display: none;
   }
 }

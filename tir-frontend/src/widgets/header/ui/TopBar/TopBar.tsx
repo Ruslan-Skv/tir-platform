@@ -29,9 +29,9 @@ export const TopBar: React.FC = () => {
   return (
     <div className={styles.topBar}>
       {/* Мобильный телефон */}
-      <div className={styles.contactMobile}>
+      {/* <div className={styles.contactMobile}>
         <span className={styles.contact}>8-(8152)-60-12-70</span>
-      </div>
+      </div> */}
 
       <div className={styles.container}>
         {/* Десктопный телефон */}
@@ -41,6 +41,9 @@ export const TopBar: React.FC = () => {
 
         {/* Утилиты */}
         <div className={styles.utilities}>
+          <div className={styles.contactMobile}>
+            <span className={styles.contact}>8-(8152)-60-12-70</span>
+          </div>
           {/* Поиск */}
           <button onClick={handleSearchClick} className={styles.utilityButton}>
             <MagnifyingGlassIcon className={styles.icon} />
