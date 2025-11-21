@@ -1,6 +1,6 @@
 .logo {
   height: 5rem;
-  max-width: 350px;
+  max-width: clamp(12.5rem, 7.4172rem + 22.5904vw, 21.875rem);
 }
 
 .color1 {
