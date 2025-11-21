@@ -98,6 +98,17 @@ html[data-theme='dark'] .mobileUtilityButton:hover {
   color: #ec4899;
 }
 
+/* Мобильная адаптация для текста кнопок */
+@media (width < 768px) {
+  .utilityText {
+    display: none;
+  }
+
+  .icon {
+    margin-right: 0;
+  }
+}
+
 @media (width >= 640px) {
   .utilities {
     gap: 1rem;
