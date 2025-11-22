@@ -59,18 +59,28 @@
   box-shadow: 0 0 0 4px rgb(217 6 82 / 25%);
 }
 
-/* Темная тема для Button с data-attributes - ДО hover состояний */
-html[data-theme='dark'] .outline {
-  border-color: #ec4899;
-  color: #d1d5db;
-}
-
 .outline:hover:not(.disabled) {
   box-shadow: 0 0 20px 8px rgb(217 6 82 / 30%);
 }
 
-html[data-theme='dark'] .outline:hover:not(.disabled) {
-  box-shadow: 0 0 20px 8px rgb(236 72 153 / 30%);
+/* Новый вариант для мобильного меню */
+.menu {
+  background-color: rgb(217 6 82 / 10%);
+  border: 2px solid #d90652;
+  border-radius: 12px;
+  color: #d90652;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.menu:focus {
+  box-shadow: 0 0 0 4px rgb(217 6 82 / 25%);
+}
+
+.menu:hover:not(.disabled) {
+  background-color: rgb(217 6 82 / 20%);
+  box-shadow: 0 0 20px 8px rgb(217 6 82 / 25%);
+  transform: translateY(-2px);
 }
 
 /* Sizes */
@@ -97,6 +107,7 @@ html[data-theme='dark'] .outline:hover:not(.disabled) {
 
 .disabled:hover {
   box-shadow: none;
+  transform: none;
 }
 
 /* Content */
@@ -121,6 +132,38 @@ html[data-theme='dark'] .outline:hover:not(.disabled) {
   transform: scale(1.1);
 }
 
+.menu:not(.disabled):hover .glow {
+  background-color: rgb(217 6 82 / 15%);
+  border-radius: 12px;
+}
+
+/* Темная тема для Button с data-attributes */
+/* stylelint-disable-next-line no-descending-specificity */
+html[data-theme='dark'] .outline {
+  border-color: #ec4899;
+  color: #d1d5db;
+}
+
+html[data-theme='dark'] .outline:hover:not(.disabled) {
+  box-shadow: 0 0 20px 8px rgb(236 72 153 / 30%);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+html[data-theme='dark'] .menu {
+  background-color: rgb(236 72 153 / 10%);
+  border-color: #ec4899;
+  color: #ec4899;
+}
+
+html[data-theme='dark'] .menu:hover:not(.disabled) {
+  background-color: rgb(236 72 153 / 20%);
+  box-shadow: 0 0 20px 8px rgb(236 72 153 / 25%);
+}
+
 html[data-theme='dark'] .base:not(.disabled):hover .glow {
   background-color: rgb(236 72 153 / 20%);
+}
+
+html[data-theme='dark'] .menu:not(.disabled):hover .glow {
+  background-color: rgb(236 72 153 / 15%);
 }
