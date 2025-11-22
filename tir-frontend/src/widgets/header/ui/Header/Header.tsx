@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({ onNavigationClick }) => {
         <div className={styles.container}>
           <div className={styles.logoSection}>
             <Logo />
-            <ActionButtons onMobileMenuOpen={() => setMobileMenuOpen(true)} />
+            <ActionButtons onMobileMenuOpen={() => setMobileMenuOpen(!mobileMenuOpen)} />
           </div>
         </div>
       </div>
