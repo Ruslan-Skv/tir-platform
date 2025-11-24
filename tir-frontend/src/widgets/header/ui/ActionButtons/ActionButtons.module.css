@@ -4,8 +4,16 @@
 
 .desktopButtons {
   display: none;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+/* Мобильные кнопки */
+.mobileButtons {
+  display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
 }
 
 .error {
@@ -63,8 +71,10 @@ html[data-theme='dark'] .error {
 @media (width >= 767px) {
   .desktopButtons {
     display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
+  }
+
+  .mobileButtons {
+    display: none;
   }
 
   .mobileMenuButton {

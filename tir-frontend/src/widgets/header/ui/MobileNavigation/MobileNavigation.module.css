@@ -137,7 +137,8 @@
 .actionButtons {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem; /* Расстояние между кнопками */
+  width: 100%;
 }
 
 .actionButton {

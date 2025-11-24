@@ -115,3 +115,47 @@ html[data-theme='dark'] .closeButton:hover {
   background: #374151;
   color: #d1d5db;
 }
+
+/* Мобильная адаптация */
+@media (width <= 767px) {
+  .container {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .center {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .panel {
+    border-radius: 1rem 1rem 0 0;
+    margin: 0;
+    max-height: 90vh;
+    max-width: none !important;
+    padding: 1.5rem 1rem 1rem;
+    width: 100%;
+  }
+
+  .header {
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .closeButton {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (width <= 480px) {
+  .panel {
+    padding: 1rem 0.75rem 0.75rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}

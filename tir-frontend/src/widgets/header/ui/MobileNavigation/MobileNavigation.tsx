@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { navigation, dropdownMenus } from '@/shared/constants/navigation';
-import { Button } from '@/shared/ui/Button';
+import { ActionButtons } from '@/widgets/header/ui/ActionButtons/ActionButtons';
 import styles from './MobileNavigation.module.css';
 
 export interface MobileNavigationProps {
@@ -88,10 +88,6 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
     handleMenuToggle();
   };
 
-  const handleActionButtonClick = () => {
-    handleMenuToggle();
-  };
-
   // Получаем данные для активного подменю
   const getActiveSubmenu = () => {
     if (!activeMenuItem) return null;
@@ -120,10 +116,9 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
             /* Главное меню в виде сетки кнопок */
             <div className={styles.menuGrid}>
               {menuButtons.map(button => (
-                <Button
+                <button
                   key={button.name}
-                  variant="menu" // Используем новый вариант
-                  size="lg"
+                  type="button"
                   onClick={() => handleMenuItemClick(button.name, button.hasDropdown)}
                   className={styles.menuGridButton}
                   style={{
@@ -132,7 +127,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
                 >
                   <span className={styles.buttonText}>{button.name}</span>
                   {button.hasDropdown && <span className={styles.buttonArrow}>›</span>}
-                </Button>
+                </button>
               ))}
             </div>
           ) : (
@@ -142,6 +137,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
                 activeSubmenu.items.map(subItem => (
                   <button
                     key={subItem.name}
+                    type="button"
                     onClick={() => handleSubMenuItemClick(subItem.name)}
                     className={styles.subMenuItem}
                   >
@@ -154,22 +150,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
 
         {/* Футер меню с кнопками действий */}
         <div className={styles.menuFooter}>
-          <div className={styles.actionButtons}>
-            <Button
-              variant="outline"
-              onClick={handleActionButtonClick}
-              className={styles.actionButton}
-            >
-              Записаться на замер
-            </Button>
-            <Button
-              variant="outline"
-              onClick={handleActionButtonClick}
-              className={styles.actionButton}
-            >
-              Заказать обратный звонок
-            </Button>
-          </div>
+          <ActionButtons mobile /> {/* Используем обновленный компонент */}
         </div>
       </div>
     </>

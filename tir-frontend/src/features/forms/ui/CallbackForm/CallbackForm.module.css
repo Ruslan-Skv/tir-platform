@@ -134,6 +134,25 @@
   color: #4ade80;
 }
 
+/* Мобильная адаптация для уменьшения отступов */
+@media (width <= 767px) {
+  .form {
+    gap: 1rem; /* Уменьшаем расстояние между полями */
+  }
+
+  .info {
+    padding: 0.75rem; /* Уменьшаем отступы в инфоблоке */
+  }
+
+  .infoContent {
+    gap: 0.5rem;
+  }
+
+  .actions {
+    padding-top: 0.5rem;
+  }
+}
+
 @media (width >= 768px) {
   .grid {
     grid-template-columns: 1fr 1fr;

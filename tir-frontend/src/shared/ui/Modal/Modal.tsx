@@ -10,6 +10,7 @@ export interface ModalProps {
   title?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
   showCloseButton?: boolean;
+  className?: string;
 }
 
 export const Modal: React.FC<ModalProps> = ({
