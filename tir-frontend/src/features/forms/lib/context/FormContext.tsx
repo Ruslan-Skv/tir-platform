@@ -1,17 +1,13 @@
+/* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useContext, useCallback } from 'react';
 import { useModal } from '@/shared/lib/hooks/useModal';
 import { useFormSubmission } from '../useFormSubmission';
 import type { CallbackFormData, MeasurementFormData } from '../../types/forms';
 
 interface FormContextType {
-  // Модалки
   measurementModal: ReturnType<typeof useModal>;
   callbackModal: ReturnType<typeof useModal>;
-
-  // Логика отправки
   formSubmission: ReturnType<typeof useFormSubmission>;
-
-  // Обработчики
   handleMeasurementSubmit: (data: MeasurementFormData) => Promise<void>;
   handleCallbackSubmit: (data: CallbackFormData) => Promise<void>;
   handleCloseMeasurement: () => void;

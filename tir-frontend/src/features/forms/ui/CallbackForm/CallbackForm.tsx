@@ -47,7 +47,7 @@ export const CallbackForm: React.FC<CallbackFormProps> = ({
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.grid}>
-        <div>
+        <div className={styles.fieldContainer}>
           <label className={styles.label}>Имя *</label>
           <input
             type="text"
@@ -60,7 +60,7 @@ export const CallbackForm: React.FC<CallbackFormProps> = ({
           />
         </div>
 
-        <div>
+        <div className={styles.fieldContainer}>
           <label className={styles.label}>Телефон *</label>
           <input
             type="tel"
@@ -74,7 +74,7 @@ export const CallbackForm: React.FC<CallbackFormProps> = ({
         </div>
       </div>
 
-      <div>
+      <div className={styles.fieldContainer}>
         <label className={styles.label}>Email</label>
         <input
           type="email"
@@ -86,7 +86,7 @@ export const CallbackForm: React.FC<CallbackFormProps> = ({
         />
       </div>
 
-      <div>
+      <div className={styles.fieldContainer}>
         <label className={styles.label}>Удобное время для звонка *</label>
         <select
           name="preferredTime"
@@ -104,7 +104,7 @@ export const CallbackForm: React.FC<CallbackFormProps> = ({
         </select>
       </div>
 
-      <div>
+      <div className={styles.fieldContainer}>
         <label className={styles.label}>Комментарий</label>
         <textarea
           name="comments"

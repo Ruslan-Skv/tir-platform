@@ -1,7 +1,7 @@
 .button {
   transition: all 0.2s ease;
   white-space: nowrap;
-  width: 100%; /* Добавляем для одинакового размера */
+  width: 100%;
 }
 
 .button.mobile {
@@ -13,13 +13,13 @@
 .mobileButtons {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* Расстояние между кнопками */
+  gap: 0.5rem;
   width: 100%;
 }
 
 .measurement {
   border-color: #10b981;
-  color: #10b981;
+  color: #000;
   transition: all 0.2s ease;
 }
 
@@ -30,7 +30,7 @@
 
 .callback {
   border-color: #3b82f6;
-  color: #3b82f6;
+  color: #000;
   transition: all 0.2s ease;
 }
 
@@ -42,7 +42,7 @@
 /* Светлая тема - черный текст */
 html[data-theme='light'] .measurement,
 html[data-theme='light'] .callback {
-  color: #000; /* Черный текст для светлой темы */
+  color: #000;
 }
 
 /* Темная тема */

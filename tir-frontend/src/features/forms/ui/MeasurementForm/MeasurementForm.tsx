@@ -70,7 +70,7 @@ export const MeasurementForm: React.FC<MeasurementFormProps> = ({
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.grid}>
-        <div>
+        <div className={styles.fieldContainer}>
           <label className={styles.label}>Имя *</label>
           <input
             type="text"
@@ -83,7 +83,7 @@ export const MeasurementForm: React.FC<MeasurementFormProps> = ({
           />
         </div>
 
-        <div>
+        <div className={styles.fieldContainer}>
           <label className={styles.label}>Телефон *</label>
           <input
             type="tel"
@@ -97,7 +97,7 @@ export const MeasurementForm: React.FC<MeasurementFormProps> = ({
         </div>
       </div>
 
-      <div>
+      <div className={styles.fieldContainer}>
         <label className={styles.label}>Email</label>
         <input
           type="email"
@@ -109,7 +109,7 @@ export const MeasurementForm: React.FC<MeasurementFormProps> = ({
         />
       </div>
 
-      <div>
+      <div className={styles.fieldContainer}>
         <label className={styles.label}>Адрес объекта *</label>
         <input
           type="text"
@@ -123,7 +123,7 @@ export const MeasurementForm: React.FC<MeasurementFormProps> = ({
       </div>
 
       <div className={styles.grid}>
-        <div>
+        <div className={styles.fieldContainer}>
           <label className={styles.label}>Предпочтительная дата *</label>
           <select
             name="preferredDate"
@@ -145,7 +145,7 @@ export const MeasurementForm: React.FC<MeasurementFormProps> = ({
           </select>
         </div>
 
-        <div>
+        <div className={styles.fieldContainer}>
           <label className={styles.label}>Временной интервал *</label>
           <select
             name="preferredTime"
@@ -164,7 +164,7 @@ export const MeasurementForm: React.FC<MeasurementFormProps> = ({
         </div>
       </div>
 
-      <div>
+      <div className={styles.fieldContainer}>
         <label className={styles.label}>Интересующий товар</label>
         <select
           name="productType"
@@ -181,7 +181,7 @@ export const MeasurementForm: React.FC<MeasurementFormProps> = ({
         </select>
       </div>
 
-      <div>
+      <div className={styles.fieldContainer}>
         <label className={styles.label}>Комментарий</label>
         <textarea
           name="comments"
