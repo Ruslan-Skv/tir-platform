@@ -17,6 +17,15 @@ export interface MeasurementFormData {
   comments?: string;
 }
 
+export interface DirectorMessageFormData {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+  attachment?: File;
+}
+
 export interface FormSubmissionState {
   loading: boolean;
   success: boolean;

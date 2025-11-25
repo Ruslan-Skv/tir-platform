@@ -10,10 +10,10 @@ interface ContactSectionProps {
 }
 
 export const ContactSection: React.FC<ContactSectionProps> = ({ companyInfo, socialLinks }) => {
-  const { callbackModal } = useFormContext();
+  const { directorMessageModal } = useFormContext();
 
   const handleDirectorMessage = () => {
-    callbackModal.open();
+    directorMessageModal.open();
   };
 
   return (
