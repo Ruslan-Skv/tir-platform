@@ -1,0 +1,65 @@
+.productsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gridHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: #111827;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sorting {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sortSelect {
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Планшеты */
+@media (width <= 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Мобильные */
+@media (width <= 768px) {
+  .gridHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Темная тема */
+html[data-theme='dark'] .title {
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] .sortSelect {
+  background: #374151;
+  border-color: #4b5563;
+  color: #fff;
+}

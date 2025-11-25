@@ -1,0 +1,104 @@
+.pagination {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.prevButton,
+.nextButton {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  color: #374151;
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.prevButton:disabled,
+.nextButton:disabled {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.prevButton:hover:not(:disabled),
+.nextButton:hover:not(:disabled) {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.pages {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.pageButton {
+  align-items: center;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  color: #374151;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  justify-content: center;
+  transition: all 0.2s ease;
+  width: 2.5rem;
+}
+
+.pageButton.active {
+  background: #d90652;
+  border-color: #d90652;
+  color: white;
+}
+
+.pageButton:hover:not(.active) {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* Темная тема - ДОЛЖНЫ БЫТЬ ПОСЛЕ ОСНОВНЫХ СТИЛЕЙ */
+/* stylelint-disable-next-line no-descending-specificity */
+html[data-theme='dark'] .prevButton,
+/* stylelint-disable-next-line no-descending-specificity */
+html[data-theme='dark'] .nextButton {
+  background: #374151;
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+html[data-theme='dark'] .prevButton:disabled,
+html[data-theme='dark'] .nextButton:disabled {
+  background: #1f2937;
+  border-color: #374151;
+  color: #6b7280;
+}
+
+html[data-theme='dark'] .prevButton:hover:not(:disabled),
+html[data-theme='dark'] .nextButton:hover:not(:disabled) {
+  background: #4b5563;
+  border-color: #6b7280;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+html[data-theme='dark'] .pageButton {
+  background: #374151;
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+html[data-theme='dark'] .pageButton.active {
+  background: #d90652;
+  border-color: #d90652;
+  color: white;
+}
+
+html[data-theme='dark'] .pageButton:hover:not(.active) {
+  background: #4b5563;
+  border-color: #6b7280;
+}

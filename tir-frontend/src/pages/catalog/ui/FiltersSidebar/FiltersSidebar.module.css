@@ -1,0 +1,121 @@
+.filtersSidebar {
+  background: rgb(255 255 255 / 50%);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  color: #d90652;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.clearButton:hover {
+  color: #b80545;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sectionTitle {
+  color: #374151;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.option input {
+  accent-color: #d90652;
+}
+
+.optionText {
+  color: #6b7280;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.option:hover .optionText {
+  color: #374151;
+}
+
+.range {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.range input {
+  accent-color: #d90652;
+}
+
+.rangeValues {
+  color: #6b7280;
+  display: flex;
+  font-size: 0.75rem;
+  justify-content: space-between;
+}
+
+/* Темная тема - ДОЛЖНЫ БЫТЬ ПОСЛЕ ОСНОВНЫХ СТИЛЕЙ */
+html[data-theme='dark'] .filtersSidebar {
+  background: rgb(31 41 55 / 50%);
+}
+
+html[data-theme='dark'] .title {
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] .sectionTitle {
+  color: #d1d5db;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+html[data-theme='dark'] .optionText {
+  color: #9ca3af;
+}
+
+html[data-theme='dark'] .option:hover .optionText {
+  color: #e5e7eb;
+}
+
+html[data-theme='dark'] .rangeValues {
+  color: #9ca3af;
+}

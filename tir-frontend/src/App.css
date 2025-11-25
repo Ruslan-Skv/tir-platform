@@ -12,7 +12,8 @@
 /* Основной контент с отступом для fixed Header */
 .mainContent {
   flex: 1 0 auto;
-  padding-top: 140px; /* Переносим сюда */
+  padding-top: 170px; /* Переносим сюда */
+  position: relative;
 }
 
 /* Footer без отступа сверху */
