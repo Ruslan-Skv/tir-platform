@@ -8,6 +8,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+  padding: 0 0.5rem; /* Добавляем отступы для заголовка */
 }
 
 .title {
@@ -32,6 +33,7 @@
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
+  padding: 0 0.5rem; /* Добавляем отступы для сетки */
 }
 
 /* Планшеты */
@@ -41,15 +43,19 @@
   }
 }
 
-/* Мобильные */
+/* Мобильные устройства */
 @media (width <= 768px) {
   .gridHeader {
     flex-direction: column;
     gap: 1rem;
+    margin-right: 2rem;
+    padding: 0; /* Убираем внутренние отступы на мобильных */
   }
 
   .grid {
     grid-template-columns: 1fr;
+    margin-right: 1rem;
+    padding: 0; /* Убираем внутренние отступы на мобильных */
   }
 }
 

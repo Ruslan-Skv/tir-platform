@@ -2,6 +2,8 @@
   display: grid;
   gap: 1.5rem;
   grid-template-rows: auto 1fr auto;
+  margin: 0 auto;
+  max-width: 1200px;
   min-height: 60vh;
   padding: 1rem;
 }
@@ -26,7 +28,7 @@
   justify-self: center;
 }
 
-/* Мобильная адаптация */
+/* Планшеты */
 @media (width <= 1024px) {
   .mainContent {
     gap: 1rem;
@@ -34,10 +36,11 @@
   }
 }
 
+/* Мобильные устройства */
 @media (width <= 768px) {
   .catalogPage {
     gap: 1rem;
-    padding: 0.5rem;
+    padding: 0.5rem; /* Одинаковые отступы слева и справа */
   }
 
   .mainContent {
@@ -53,5 +56,12 @@
   .productsSection {
     grid-column: 1;
     grid-row: 2;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (width <= 480px) {
+  .catalogPage {
+    padding: 0.5rem; /* Увеличиваем отступы на маленьких экранах */
   }
 }

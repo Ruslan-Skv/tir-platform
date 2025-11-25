@@ -1,6 +1,7 @@
 .filtersSidebar {
   background: rgb(255 255 255 / 50%);
   border-radius: 0.5rem;
+  margin: 0 0.5rem; /* Добавляем внешние отступы */
   padding: 1.5rem;
 }
 
@@ -94,7 +95,7 @@
   justify-content: space-between;
 }
 
-/* Темная тема - ДОЛЖНЫ БЫТЬ ПОСЛЕ ОСНОВНЫХ СТИЛЕЙ */
+/* Темная тема */
 html[data-theme='dark'] .filtersSidebar {
   background: rgb(31 41 55 / 50%);
 }
@@ -118,4 +119,10 @@ html[data-theme='dark'] .option:hover .optionText {
 
 html[data-theme='dark'] .rangeValues {
   color: #9ca3af;
+}
+
+@media (width <= 768px) {
+  .filtersSidebar {
+    margin-right: 1rem; /* Добавляем внешние отступы */
+  }
 }
