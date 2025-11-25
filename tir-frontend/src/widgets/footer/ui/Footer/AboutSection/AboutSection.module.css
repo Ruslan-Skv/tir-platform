@@ -29,7 +29,7 @@
 }
 
 html[data-theme='dark'] .title {
-  color: #fff;
+  color: #d1d5db;
 }
 
 html[data-theme='dark'] .link {
