@@ -2,6 +2,7 @@
   background: transparent;
   color: #000;
   display: grid;
+  font-family: play, oswald, arial, system-ui, avenir, helvetica, sans-serif;
   grid-template-rows: 1fr auto; /* Секции растягиваются, копирайт фиксирован */
   margin-top: auto; /* Прижимает к низу */
   min-height: 300px; /* Минимальная высота всего футера */
