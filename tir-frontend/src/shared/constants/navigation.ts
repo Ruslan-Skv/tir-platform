@@ -738,3 +738,8 @@ export function getMenuItemByProductType(productType: string): DropdownItem | nu
   }
   return null;
 }
+
+export const mainCategories = navigation.map(item => ({
+  name: item.name,
+  href: item.href,
+}));

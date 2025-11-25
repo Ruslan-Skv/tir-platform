@@ -1,0 +1,41 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title {
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.link {
+  color: #374151;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #d90652;
+}
+
+html[data-theme='dark'] .title {
+  color: #fff;
+}
+
+html[data-theme='dark'] .link {
+  color: #d1d5db;
+}
+
+html[data-theme='dark'] .link:hover {
+  color: #d90652;
+}

@@ -1,6 +1,23 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  max-width: 1200px;
   min-height: 100vh;
+  position: relative;
   width: 100%;
+  z-index: 10;
+}
+
+/* Основной контент с отступом для fixed Header */
+.mainContent {
+  flex: 1 0 auto;
+  padding-top: 140px; /* Переносим сюда */
+}
+
+/* Footer без отступа сверху */
+.App > footer {
+  flex-shrink: 0;
 }
 
 /* Остальные существующие стили */
@@ -25,5 +42,12 @@
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin 20s linear infinite;
+  }
+}
+
+/* Адаптивные отступы для мобильных устройств */
+@media (width <= 766px) {
+  .mainContent {
+    padding-top: 120px;
   }
 }

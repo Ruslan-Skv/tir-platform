@@ -1,0 +1,33 @@
+.bottom {
+  align-self: end; /* Прижимаем к низу grid-ячейки */
+  border-top: 1px solid #d90652;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.copyright {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.developer {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0;
+}
+
+html[data-theme='dark'] .copyright,
+html[data-theme='dark'] .developer {
+  color: #9ca3af;
+}

@@ -1,0 +1,13 @@
+.footer {
+  background: transparent;
+  color: #000;
+  display: grid;
+  grid-template-rows: 1fr auto; /* Секции растягиваются, копирайт фиксирован */
+  margin-top: auto; /* Прижимает к низу */
+  min-height: 300px; /* Минимальная высота всего футера */
+  position: relative;
+}
+
+html[data-theme='dark'] .footer {
+  color: #fff;
+}

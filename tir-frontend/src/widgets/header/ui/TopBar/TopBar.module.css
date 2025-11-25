@@ -1,11 +1,11 @@
 .contact {
+  color: #374151;
   font-family: play, oswald, arial, 'great vibes', Georgia, 'Times New Roman', Times, serif;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
 .contactMobile .contact {
-  color: #374151;
   display: flex;
   font-size: 0.95rem;
   font-weight: 500;

@@ -1,0 +1,24 @@
+.sections {
+  align-self: start;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr; /* 1 колонка на мобильных */
+}
+
+@media (width >= 768px) {
+  .grid {
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки на десктопе */
+  }
+}

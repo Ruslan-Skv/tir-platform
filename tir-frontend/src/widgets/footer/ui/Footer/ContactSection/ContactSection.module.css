@@ -1,0 +1,97 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.title {
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subtitle {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  color: #374151;
+  margin: 0;
+}
+
+.phone {
+  color: #111827;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.directorButton {
+  margin-inline: auto;
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-inline: auto;
+}
+
+.socialText {
+  color: #374151;
+  margin: 0;
+}
+
+.socialLink {
+  align-items: center;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  display: inline-flex;
+  height: 2rem;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  width: 2rem;
+}
+
+.socialLink:hover {
+  background-color: #d1d5db;
+}
+
+.socialIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+html[data-theme='dark'] .title,
+html[data-theme='dark'] .subtitle {
+  color: #fff;
+}
+
+html[data-theme='dark'] .text {
+  color: #d1d5db;
+}
+
+html[data-theme='dark'] .phone {
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] .socialLink {
+  background-color: #374151;
+}
+
+html[data-theme='dark'] .socialLink:hover {
+  background-color: #4b5563;
+}
