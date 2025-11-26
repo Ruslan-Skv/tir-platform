@@ -1,12 +1,12 @@
 .mobileMenu {
-  background: transparent;
+  background: rgb(187 187 187);
   bottom: 0;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 90px);
   position: fixed;
   right: -100%;
-  top: 80px;
+  top: 100px;
   transition: right 0.3s ease-in-out;
   width: 100%;
   z-index: 50;
@@ -147,7 +147,7 @@
 
 /* Темная тема */
 html[data-theme='dark'] .mobileMenu {
-  background: transparent;
+  background: rgb(28 28 28);
 }
 
 html[data-theme='dark'] .menuHeader {

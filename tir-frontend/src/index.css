@@ -69,7 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: oswald, play, arial, sans-serif;
+  font-family: play, arial, sans-serif;
   font-weight: 600;
   line-height: 1.25;
   margin: 0 0 0.5em;
@@ -161,7 +161,7 @@ button {
 /* ===== СВЕТЛАЯ ТЕМА ===== */
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: #fff;
+    background-color: #374151;
     color: #213547;
   }
 

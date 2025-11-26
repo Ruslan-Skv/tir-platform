@@ -48,13 +48,11 @@
   .gridHeader {
     flex-direction: column;
     gap: 1rem;
-    margin-right: 2rem;
     padding: 0; /* Убираем внутренние отступы на мобильных */
   }
 
   .grid {
     grid-template-columns: 1fr;
-    margin-right: 1rem;
     padding: 0; /* Убираем внутренние отступы на мобильных */
   }
 }

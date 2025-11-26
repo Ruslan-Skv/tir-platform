@@ -3,7 +3,7 @@ import styles from './Pagination.module.css';
 
 export const Pagination: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 5;
+  const totalPages = 3;
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
