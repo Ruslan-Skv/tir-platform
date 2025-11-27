@@ -27,7 +27,6 @@
 .topSection {
   align-items: center;
   background: transparent;
-  border-bottom: 1px solid rgb(217 6 82 / 20%);
   display: flex;
   justify-content: space-between;
   padding: 0.75rem 1rem;
@@ -74,7 +73,7 @@
   background: transparent;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.3rem 1rem;
 }
 
 .logoSection {
@@ -105,7 +104,7 @@
 .menuContent {
   flex: 1;
   overflow-y: auto;
-  padding: 1rem;
+  padding: 0.2rem 1rem;
 }
 
 /* Сетка для мобильного меню */
@@ -175,8 +174,7 @@
 
 .menuFooter {
   background: transparent;
-  border-top: 1px solid rgb(217 6 82 / 20%);
-  padding: 1rem;
+  padding: 0 1rem 0.5rem;
 }
 
 .actionButtons {
