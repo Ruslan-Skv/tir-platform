@@ -11,6 +11,7 @@ import {
 import { navigation, dropdownMenus } from '@/shared/constants/navigation';
 import { ActionButtons } from '@/widgets/header/ui/ActionButtons/ActionButtons';
 import { Logo } from '@/shared/ui/Logo';
+import { useTheme } from '@/features/theme';
 import styles from './MobileNavigation.module.css';
 
 export interface MobileNavigationProps {
@@ -25,7 +26,8 @@ type MenuState = 'main' | 'submenu';
 interface MenuButton {
   name: string;
   hasDropdown: boolean;
-  image?: string;
+  imageLight?: string;
+  imageDark?: string;
   href?: string;
 }
 
@@ -36,28 +38,86 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
 }) => {
   const [currentMenu, setCurrentMenu] = React.useState<MenuState>('main');
   const [activeMenuItem, setActiveMenuItem] = React.useState<string | null>(null);
+  const { isDarkTheme } = useTheme();
+
+  // Предзагрузка изображений при монтировании компонента
+  React.useEffect(() => {
+    const preloadMenuImages = () => {
+      const imagePaths = [
+        '/images/menu/light/01.png',
+        '/images/menu/light/02.png',
+        '/images/menu/light/03.png',
+        '/images/menu/light/04.png',
+        '/images/menu/light/05.png',
+        '/images/menu/light/06.png',
+        '/images/menu/light/07.png',
+        '/images/menu/dark/01.png',
+        '/images/menu/dark/02.png',
+        '/images/menu/dark/03.png',
+        '/images/menu/dark/04.png',
+        '/images/menu/dark/05.png',
+        '/images/menu/dark/06.png',
+        '/images/menu/dark/07.png',
+      ];
+
+      imagePaths.forEach(path => {
+        const img = new Image();
+        img.src = path;
+      });
+    };
+
+    preloadMenuImages();
+  }, []);
+
+  // Функция для получения картинки в зависимости от темы
+  const getImageForMenuItem = (itemName: string): string => {
+    const imageMap: Record<string, { light: string; dark: string }> = {
+      Мебель: {
+        light: '/images/menu/light/02.png',
+        dark: '/images/menu/dark/02.png',
+      },
+      Ремонт: {
+        light: '/images/menu/light/01.png',
+        dark: '/images/menu/dark/01.png',
+      },
+      Двери: {
+        light: '/images/menu/light/03.png',
+        dark: '/images/menu/dark/03.png',
+      },
+      Окна: {
+        light: '/images/menu/light/04.png',
+        dark: '/images/menu/dark/04.png',
+      },
+      Потолки: {
+        light: '/images/menu/light/06.png',
+        dark: '/images/menu/dark/06.png',
+      },
+      Жалюзи: {
+        light: '/images/menu/light/05.png',
+        dark: '/images/menu/dark/05.png',
+      },
+      Акции: {
+        light: '/images/menu/light/07.png',
+        dark: '/images/menu/dark/07.png',
+      },
+    };
+
+    const itemImages = imageMap[itemName];
+    if (itemImages) {
+      return isDarkTheme ? itemImages.dark : itemImages.light;
+    }
+
+    return isDarkTheme ? '/images/menu/dark/default.jpg' : '/images/menu/light/default.jpg';
+  };
 
   // Преобразуем навигацию в формат для кнопок с изображениями
   const menuButtons: MenuButton[] = navigation.map(item => ({
     name: item.name,
     hasDropdown: item.hasDropdown,
-    image: getImageForMenuItem(item.name),
+    imageLight: getImageForMenuItem(item.name),
+    imageDark: getImageForMenuItem(item.name),
     href: item.href,
   }));
-
-  function getImageForMenuItem(itemName: string): string {
-    // Здесь можно задать изображения для каждого пункта меню
-    const imageMap: Record<string, string> = {
-      Мебель: '/images/menu/light/02.png',
-      Ремонт: '/images/menu/light/01.png',
-      Двери: '/images/menu/light/03.png',
-      Окна: '/images/menu/light/04.png',
-      Потолки: '/images/menu/light/06.png',
-      Жалюзи: '/images/menu/light/05.png',
-      Акции: '/images/menu/light/07.png',
-    };
-    return imageMap[itemName] || '/images/menu/default.jpg';
-  }
 
   const handleCloseMenu = () => {
     if (setMobileMenuOpen) {
@@ -160,11 +220,11 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
                   onClick={() => handleMenuItemClick(button.name, button.hasDropdown)}
                   className={styles.menuGridButton}
                   style={{
-                    backgroundImage: button.image ? `url(${button.image})` : 'none',
+                    backgroundImage: `url(${getImageForMenuItem(button.name)})`,
                   }}
                 >
                   <span className={styles.buttonText}>{button.name}</span>
-                  {button.hasDropdown && <span className={styles.buttonArrow}>›</span>}
+                  {/* {button.hasDropdown && <span className={styles.buttonArrow}>›</span>} */}
                 </button>
               ))}
             </div>
