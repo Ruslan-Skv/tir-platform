@@ -37,6 +37,12 @@ export const navigation: NavigationItem[] = [
     hasDropdown: true,
     category: 'blinds',
   },
+  {
+    name: 'Акции',
+    href: '#',
+    hasDropdown: false,
+    category: 'sale',
+  },
 ];
 
 export const dropdownMenus: DropdownMenus = {

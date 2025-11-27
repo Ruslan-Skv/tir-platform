@@ -65,3 +65,13 @@ html[data-theme='dark'] .callback:hover {
   background-color: #60a5fa;
   color: #1f2937;
 }
+
+@media (width <= 480px) {
+  .measurement {
+    background-color: #d90652;
+  }
+
+  html[data-theme='dark'] .measurement {
+    background-color: transparent;
+  }
+}
