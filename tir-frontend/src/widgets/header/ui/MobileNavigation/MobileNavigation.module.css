@@ -137,7 +137,7 @@
 }
 
 .buttonText {
-  color: #d1d5db;
+  color: #374151;
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.2;
@@ -210,6 +210,10 @@
 }
 
 /* Темная тема */
+html[data-theme='dark'] .buttonText {
+  color: #d1d5db;
+}
+
 html[data-theme='dark'] .mobileMenu {
   background: rgb(28 28 28);
 }
